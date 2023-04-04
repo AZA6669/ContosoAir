@@ -8,6 +8,7 @@ steps:
       command: 'custom'
       customcommand: 'install --production'
   - script: |
+      npm install 
       npm install express
       npm install jest supertest --save-dev 
       npm test
