@@ -10,7 +10,8 @@ steps:
   - script: |
       npm install
       npm test
-      npm link jest
+      npm install express 
+      npm install jest supertest --save-dev
     displayName: 'Run unit tests'
     continueOnError: true
   - task: PublishTestResults@2
