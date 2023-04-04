@@ -7,10 +7,10 @@ steps:
     inputs:
       command: 'custom'
       customcommand: 'install --production'
+      customcommand: 'npm install express'
+      customcommand: 'npm install jest supertest --save-dev'
   - script: |
       npm install 
-      npm install express
-      npm install jest supertest --save-dev 
       npm test
       
     displayName: 'Run unit tests'
