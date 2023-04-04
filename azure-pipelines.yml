@@ -11,7 +11,6 @@ steps:
     inputs:
       command: 'custom'
       customcommand: 'install express'
-      customcommand: 'npm install jest supertest --save-dev'
     - task: Npm@3
     inputs:
       command: 'custom'
