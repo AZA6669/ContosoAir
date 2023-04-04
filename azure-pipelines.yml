@@ -7,12 +7,18 @@ steps:
     inputs:
       command: 'custom'
       customcommand: 'install --production'
-      customcommand: 'npm install express'
+  - task: Npm@2
+    inputs:
+      command: 'custom'
+      customcommand: 'install express'
       customcommand: 'npm install jest supertest --save-dev'
+    - task: Npm@3
+    inputs:
+      command: 'custom'
+      customcommand: 'install jest supertest --save-dev'
   - script: |
       npm install 
-      npm test
-      
+      npm test  
     displayName: 'Run unit tests'
     continueOnError: true
   - task: PublishTestResults@2
