@@ -9,11 +9,11 @@ steps:
       customcommand: 'install --production'
   - task: Npm@2
     inputs:
-      command: 'custom'
+      command: 'custom2'
       customcommand: 'install express'
-    - task: Npm@3
+  - task: Npm@3
     inputs:
-      command: 'custom'
+      command: 'custom3'
       customcommand: 'install jest supertest --save-dev'
   - script: |
       npm install 
