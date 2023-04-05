@@ -9,7 +9,6 @@ steps:
       customcommand: 'install --no-optional --no-fund --no-progress --only=prod --legacy-peer-deps'
   - script: |
      npm install
-     npm install jest -save-dev
      npm test
     displayName: 'Run unit tests'
     continueOnError: true
