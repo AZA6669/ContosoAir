@@ -8,8 +8,9 @@ steps:
       command: 'custom'
       customcommand: 'install --no-optional --no-fund --no-progress --only=prod --legacy-peer-deps'
   - script: |
-      npm install
-      npm test
+     npm install
+     npm run build
++    npm run test
     displayName: 'Run unit tests'
     continueOnError: true
   - task: PublishTestResults@2
