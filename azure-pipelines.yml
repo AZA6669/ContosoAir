@@ -6,7 +6,7 @@ steps:
   - task: Npm@1
     inputs:
       command: 'custom'
-      customcommand: 'install --no-optional --no-fund --no-progress --only=prod --legacy-peer-deps'
+      customcommand: 'install'
   - script: |
      npm install
      npm test
