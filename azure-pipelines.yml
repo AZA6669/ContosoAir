@@ -1,12 +1,12 @@
 pool:
-  vmImage: ubuntu-20.04
+  vmImage: ubuntu-latest
 trigger:
   - master
 steps:
   - task: Npm@1
     inputs:
       command: 'custom'
-      customcommand: 'install --legacy-peer-deps'
+      customcommand: 'install --no-optional --no-fund --no-progress --only=prod --legacy-peer-deps'
   - script: |
       npm install
       npm test
